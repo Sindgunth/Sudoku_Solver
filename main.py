@@ -78,21 +78,6 @@ class Group:
                     return []
         return candidate
 
-    def partial_match_search(self, number:int):
-        candidates =[]
-        for member in self.members:
-            if not member.is_set:
-                if number in member.possibilty:
-                    candidates.append(member)
-        if len(candidates)<4:
-            for member in candidates:
-                pass
-
-
-    def find_subgroup(self):
-        pass
-
-
 
 class Row(Group):
     pass
@@ -184,7 +169,6 @@ def clean_input(input_list):
             input_list[i] = 0
 
 
-
 def search(sudoku: Sudoku):
     while sudoku.progress:
         sudoku.progress = False
@@ -198,7 +182,6 @@ if __name__ == '__main__':
         init_sudoku(sudoku_1)
         sudoku_print(sudoku_1.cells)
         search(sudoku_1)
-
 
 """
 [2,1,0, 4,0,0, 0,3,6,
